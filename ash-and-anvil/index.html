@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ash & Anvil | Gardner, KS</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#c9a84c;--dark:#0a0a0a;--gray:#1a1a1a;--lg:#2a2a2a}
+body{background:var(--dark);color:#e8e0d0;font-family:'Lora',serif}
+header{background:var(--dark);border-bottom:1px solid var(--gold);padding:28px 40px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
+.logo span{display:block;font-size:.6rem;color:#777;letter-spacing:5px;margin-top:4px}
+nav a{color:#aaa;text-decoration:none;font-size:.75rem;letter-spacing:3px;text-transform:uppercase;margin-left:32px}
+nav a:hover{color:var(--gold)}
+.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 40px;background:radial-gradient(ellipse at center,#111,#0a0a0a)}
+.eyebrow{font-size:.68rem;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5.5vw,4.8rem);line-height:1.1;color:#fff;margin-bottom:24px}
+h1 em{color:var(--gold);font-style:normal}
+.hero p{color:#999;max-width:540px;margin:0 auto 44px;line-height:1.9}
+.btn{display:inline-block;background:var(--gold);color:#0a0a0a;padding:15px 42px;font-family:'Playfair Display',serif;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;text-decoration:none}
+.btn:hover{background:#ddb94e}
+.btn-o{background:transparent;color:var(--gold);border:1px solid var(--gold);margin-left:14px}
+.section{padding:96px 40px;max-width:1080px;margin:0 auto}
+.stitle{font-family:'Playfair Display',serif;font-size:2.2rem;color:#fff;margin-bottom:14px}
+.ssub{color:#777;font-size:.72rem;letter-spacing:5px;text-transform:uppercase;margin-bottom:44px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.card{background:var(--gray);padding:40px 32px;border-bottom:3px solid transparent;transition:border-color .3s}
+.card:hover{border-bottom-color:var(--gold)}
+.card-ic{font-size:1.6rem;margin-bottom:18px}
+.card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);margin-bottom:10px}
+.card p{color:#888;font-size:.88rem;line-height:1.8}
+.fw{background:var(--gray);padding:96px 40px}
+.fi{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.stat{font-family:'Playfair Display',serif;font-size:4.5rem;color:var(--gold);line-height:1}
+.sl{color:#777;font-size:.72rem;letter-spacing:4px;text-transform:uppercase;margin-top:6px}
+.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:.62rem;letter-spacing:4px;text-transform:uppercase;padding:7px 18px;margin-bottom:20px}
+.cta{background:linear-gradient(135deg,#0f0f0f,#171200);border:1px solid rgba(201,168,76,.18);padding:56px;text-align:center}
+footer{background:#050505;border-top:1px solid #161616;padding:44px 40px;text-align:center}
+footer p{color:#444;font-size:.78rem;margin-top:8px}
+@media(max-width:768px){.g3{grid-template-columns:1fr}.fi{grid-template-columns:1fr;gap:36px}nav{display:none}header{padding:18px 24px}.section{padding:56px 24px}.fw{padding:56px 24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Ash & Anvil<span>Gardner, Kansas</span></div>
+  <nav><a href="#lounge">The Lounge</a><a href="#events">Events</a><a href="#contact">Visit</a></nav>
+</header>
+<div class="hero">
+  <div>
+    <p class="eyebrow">Gardner, Kansas · Downtown Park St</p>
+    <h1>Forged for the<br><em>Serious Cigar Lover</em></h1>
+    <p>Ash & Anvil is Gardner's premier cigar destination — built with the craftsmanship of a blacksmith and the taste of a tobacconist. 5 stars. 235 reviews. Come find out why.</p>
+    <a href="#events" class="btn">See Events</a>
+    <a href="#contact" class="btn btn-o">Find Us</a>
+  </div>
+</div>
+<div class="section" id="lounge">
+  <p class="ssub">The Experience</p>
+  <h2 class="stitle">Where Quality Is Non-Negotiable.</h2>
+  <div class="g3">
+    <div class="card"><div class="card-ic">⚒️</div><h3>Curated Humidor</h3><p>Every cigar on our shelves was chosen with intention. Premium brands, boutique finds, and rare releases for those who know what they're after.</p></div>
+    <div class="card"><div class="card-ic">🏡</div><h3>The Lounge</h3><p>A comfortable, welcoming space in the heart of Gardner's downtown. The kind of lounge that makes you want to stay for just one more smoke.</p></div>
+    <div class="card"><div class="card-ic">📅</div><h3>Events & Tastings</h3><p>Regular cigar events, brand nights, and spirit pairings. There's always something worth showing up for at Ash & Anvil.</p></div>
+  </div>
+</div>
+<div class="fw">
+  <div class="fi">
+    <div>
+      <div class="stat">5.0★</div><div class="sl">Google Rating</div>
+      <br><br>
+      <div class="stat">235+</div><div class="sl">Verified Reviews</div>
+    </div>
+    <div>
+      <div class="badge">Gardner's Best</div>
+      <h2 class="stitle">A Perfect Score, Every Single Time.</h2>
+      <p style="color:#888;line-height:1.9;margin-top:14px">235 reviews. 5.0 stars. Zero exceptions. Ash & Anvil has built one of the most impeccable reputations of any cigar lounge in the region. Located in downtown Gardner at 204 E Park St — worth every mile of the drive.</p>
+    </div>
+  </div>
+</div>
+<div class="section" id="events" style="max-width:800px">
+  <div class="cta">
+    <p class="ssub">Stay Connected</p>
+    <h2 class="stitle">Never Miss a Drop or Event</h2>
+    <p style="color:#888;max-width:440px;margin:0 auto 32px;line-height:1.8">New cigar arrivals, limited releases, brand events, and tastings. Get in touch to stay in the loop and be first in line.</p>
+    <a href="mailto:INFO@ASHANDANVILCIGARS.COM" class="btn">Get in Touch</a>
+  </div>
+</div>
+<div class="section" id="contact">
+  <p class="ssub">Find Us</p>
+  <h2 class="stitle">Come See What 5 Stars Feels Like.</h2>
+  <p style="color:#888;font-size:1rem;line-height:2.4">📍 204 E Park St, Gardner, KS 66030<br>📞 (913) 558-8074<br>✉️ INFO@ASHANDANVILCIGARS.COM</p>
+</div>
+<footer>
+  <div style="color:var(--gold);font-family:'Playfair Display',serif;letter-spacing:2px">Ash & Anvil</div>
+  <p>204 E Park St · Gardner, KS 66030 · © 2025</p>
+</footer>
+</body>
+</html>
