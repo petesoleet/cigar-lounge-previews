@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke & Mirrors Cigar Lounge | Fredericksburg's Premium Cigar Destination</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            background-color: #0a0a0a;
+            color: #f5f0e8;
+            line-height: 1.7;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.2rem 5%;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c9a84c;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #f5f0e8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #c9a84c;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%);
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: #c9a84c;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: #d4c5a9;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #c9a84c;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 2px;
+            transition: all 0.3s;
+            border: 2px solid #c9a84c;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: #c9a84c;
+        }
+        
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #c9a84c;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .membership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tier-card {
+            background: #1a1410;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .tier-card:hover {
+            border-color: #c9a84c;
+            transform: translateY(-5px);
+        }
+        
+        .tier-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #c9a84c;
+            margin-bottom: 1rem;
+        }
+        
+        .tier-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f5f0e8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tier-card .period {
+            color: #d4c5a9;
+            margin-bottom: 2rem;
+        }
+        
+        .tier-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .tier-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            color: #d4c5a9;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .event-card {
+            background: #1a1410;
+            padding: 2rem;
+            border-left: 3px solid #c9a84c;
+        }
+        
+        .event-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #c9a84c;
+            margin-bottom: 1rem;
+        }
+        
+        .event-card p {
+            color: #d4c5a9;
+            margin-bottom: 1rem;
+        }
+        
+        .about {
+            background: #1a1410;
+            padding: 5rem;
+            border-top: 1px solid rgba(201, 168, 76, 0.2);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        }
+        
+        .about p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            color: #d4c5a9;
+            text-align: center;
+        }
+        
+        .final-cta {
+            text-align: center;
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%);
+        }
+        
+        .final-cta h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            color: #d4c5a9;
+            margin-bottom: 2.5rem;
+        }
+        
+        footer {
+            background: #0a0a0a;
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(201, 168, 76, 0.2);
+        }
+        
+        footer p {
+            color: #d4c5a9;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer a {
+            color: #c9a84c;
+            text-decoration: none;
+        }
+        
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #c9a84c;
+            padding: 1rem;
+            text-align: center;
+            z-index: 999;
+            border-top: 2px solid #b39740;
+        }
+        
+        .mobile-cta a {
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3rem 5%;
+            }
+            
+            .mobile-cta {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Smoke & Mirrors</a>
+            <ul>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>Smoke & Mirrors Cigar Lounge</h1>
+            <p>Fredericksburg's hidden gem where exceptional cigars meet unmatched hospitality</p>
+            <a href="#membership" class="cta-btn">Join Our Community</a>
+        </div>
+    </section>
+
+    <section id="membership">
+        <h2>Exclusive Membership Access</h2>
+        <div class="membership-grid">
+            <div class="tier-card">
+                <h3>Enthusiast</h3>
+                <div class="price">$59</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>Personal humidor locker</li>
+                    <li>12% off all cigars</li>
+                    <li>Priority lounge seating</li>
+                    <li>Monthly member events</li>
+                    <li>Complimentary birthday cigar</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Join Now</a>
+            </div>
+            <div class="tier-card">
+                <h3>Connoisseur</h3>
+                <div class="price">$129</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>Everything in Enthusiast</li>
+                    <li>18% off all purchases</li>
+                    <li>4 guest passes monthly</li>
+                    <li>Private tasting invites</li>
+                    <li>Rare cigar allocations</li>
+                    <li>Complimentary cut & light service</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Join Now</a>
+            </div>
+            <div class="tier-card">
+                <h3>VIP Reserve</h3>
+                <div class="price">$249</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>Everything in Connoisseur</li>
+                    <li>25% off all purchases</li>
+                    <li>Unlimited guest privileges</li>
+                    <li>Private lounge access</li>
+                    <li>Personalized cigar curation</li>
+                    <li>Exclusive event hosting rights</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Private Events & Experiences</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Tasting Sessions</h3>
+                <p>Guided cigar and whiskey pairings featuring rare selections. Perfect for groups seeking an educational and luxurious evening.</p>
+                <p><strong>Starting at $650</strong></p>
+            </div>
+            <div class="event-card">
+                <h3>Private Celebrations</h3>
+                <p>Bachelor parties, anniversaries, promotions—celebrate your milestones in style with dedicated space and personalized service.</p>
+                <p><strong>Starting at $450</strong></p>
+            </div>
+            <div class="event-card">
+                <h3>Corporate Gatherings</h3>
+                <p>Impress clients and reward teams with exclusive lounge access, premium cigars, and professional concierge service.</p>
+                <p><strong>Starting at $1,100</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>The Smoke & Mirrors Story</h2>
+        <p>With a perfect 5.0-star rating, Smoke & Mirrors has earned its place as Fredericksburg's most trusted cigar destination. Located on Princess Anne Street, we've created more than just a lounge—we've built a community.</p>
+        <p>Every detail, from our curated selection to our impeccable service, is designed to deliver an experience that exceeds expectations. When you walk through our doors, you're not just a customer—you're family.</p>
+    </section>
+
+    <section class="final-cta">
+        <h2>Experience Perfection</h2>
+        <p>Join Fredericksburg's most discerning cigar enthusiasts</p>
+        <a href="#contact" class="cta-btn">Become a Member</a>
+    </section>
+
+    <footer id="contact">
+        <p><strong>Smoke & Mirrors Cigar Lounge</strong></p>
+        <p>1411 Princess Anne St, Fredericksburg, VA 22401</p>
+        <p><a href="tel:5408182969">(540) 818-2969</a></p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #8a7a5f;">© 2026 Smoke & Mirrors Cigar Lounge. All rights reserved.</p>
+    </footer>
+
+    <div class="mobile-cta">
+        <a href="tel:5408182969">Call Now: (540) 818-2969</a>
+    </div>
+</body>
+</html>

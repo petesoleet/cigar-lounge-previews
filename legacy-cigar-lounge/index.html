@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Cigar Lounge | Baltimore's Premier Cigar Destination</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lora', serif; background: #0a0a0a; color: #f5f0e8; line-height: 1.7; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.95); z-index: 1000; padding: 1.2rem 5%; border-bottom: 1px solid rgba(201,168,76,0.2); }
+        nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: #c9a84c; text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: #f5f0e8; text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: #c9a84c; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 5% 4rem; background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; font-weight: 900; color: #c9a84c; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; color: #d4c5a9; max-width: 700px; margin: 0 auto 2.5rem; }
+        .cta-btn { display: inline-block; padding: 1rem 2.5rem; background: #c9a84c; color: #0a0a0a; font-weight: 600; text-decoration: none; border: 2px solid #c9a84c; transition: all 0.3s; }
+        .cta-btn:hover { background: transparent; color: #c9a84c; }
+        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #c9a84c; margin-bottom: 3rem; text-align: center; }
+        .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
+        .event-card { background: #1a1410; padding: 2rem; border-left: 3px solid #c9a84c; }
+        .event-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #c9a84c; margin-bottom: 1rem; }
+        .event-card p { color: #d4c5a9; margin-bottom: 1rem; }
+        .about { background: #1a1410; padding: 5rem; border-top: 1px solid rgba(201,168,76,0.2); }
+        .about p { font-size: 1.2rem; max-width: 900px; margin: 0 auto 2rem; color: #d4c5a9; text-align: center; }
+        .final-cta { text-align: center; padding: 6rem 5%; background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%); }
+        .final-cta p { font-size: 1.2rem; color: #d4c5a9; margin-bottom: 2.5rem; }
+        footer { background: #0a0a0a; padding: 3rem 5%; text-align: center; border-top: 1px solid rgba(201,168,76,0.2); }
+        footer p { color: #d4c5a9; margin-bottom: 0.5rem; }
+        footer a { color: #c9a84c; text-decoration: none; }
+        .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #c9a84c; padding: 1rem; text-align: center; z-index: 999; }
+        .mobile-cta a { color: #0a0a0a; text-decoration: none; font-weight: 700; }
+        @media (max-width: 768px) { nav ul { display: none; } .hero h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } .mobile-cta { display: block; } }
+    </style>
+</head>
+<body>
+    <nav><div class="container"><a href="#" class="logo">Legacy Cigar Lounge</a><ul><li><a href="#events">Events</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+    <section class="hero"><div><h1>Legacy Cigar Lounge</h1><p>Baltimore's destination for exceptional cigars and unforgettable celebrations</p><a href="#events" class="cta-btn">Book Your Event</a></div></section>
+    <section id="events"><h2>Private Event Experiences</h2><div class="events-grid"><div class="event-card"><h3>Tasting Nights</h3><p>Curated cigar and whiskey pairings for groups of 8-15. Experience rare selections with expert guidance.</p><p><strong>From $700</strong></p></div><div class="event-card"><h3>Celebration Packages</h3><p>Bachelor parties, birthdays, promotions—celebrate in style with dedicated space and premium service.</p><p><strong>From $550</strong></p></div><div class="event-card"><h3>Corporate Events</h3><p>Impress clients with exclusive lounge access, premium cigars, and professional hospitality.</p><p><strong>From $1,200</strong></p></div></div></section>
+    <section id="about" class="about"><h2>The Legacy Standard</h2><p>With a perfect 4.9-star rating, Legacy Cigar Lounge has established itself as Baltimore's most trusted destination for cigar enthusiasts. Located on Belair Road, we've built a reputation on exceptional service and unforgettable experiences.</p></section>
+    <section class="final-cta"><h2>Ready to Create Your Legacy?</h2><p>Book your next celebration with Baltimore's finest cigar lounge</p><a href="#contact" class="cta-btn">Reserve Now</a></section>
+    <footer id="contact"><p><strong>Legacy Cigar Lounge</strong></p><p>6333 Belair Rd, Baltimore, MD 21206</p><p><a href="tel:4437684602">(443) 768-4602</a></p><p style="margin-top: 2rem; font-size: 0.9rem; color: #8a7a5f;">© 2026 Legacy Cigar Lounge. All rights reserved.</p></footer>
+    <div class="mobile-cta"><a href="tel:4437684602">Book: (443) 768-4602</a></div>
+</body>
+</html>

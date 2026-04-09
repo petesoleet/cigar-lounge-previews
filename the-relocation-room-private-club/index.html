@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Relocation Room Private Club | Gaithersburg's Exclusive Cigar Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lora', serif; background-color: #0a0a0a; color: #f5f0e8; line-height: 1.7; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 1.2rem 5%; border-bottom: 1px solid rgba(201, 168, 76, 0.2); }
+        nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: #c9a84c; text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: #f5f0e8; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: #c9a84c; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 5% 4rem; background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; font-weight: 900; color: #c9a84c; margin-bottom: 1rem; letter-spacing: -1px; }
+        .hero p { font-size: 1.3rem; color: #d4c5a9; max-width: 700px; margin: 0 auto 2.5rem; }
+        .cta-btn { display: inline-block; padding: 1rem 2.5rem; background: #c9a84c; color: #0a0a0a; text-decoration: none; font-weight: 600; font-size: 1.1rem; border-radius: 2px; transition: all 0.3s; border: 2px solid #c9a84c; }
+        .cta-btn:hover { background: transparent; color: #c9a84c; }
+        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #c9a84c; margin-bottom: 3rem; text-align: center; }
+        .membership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .tier-card { background: #1a1410; border: 1px solid rgba(201, 168, 76, 0.3); padding: 2.5rem; text-align: center; transition: all 0.3s; }
+        .tier-card:hover { border-color: #c9a84c; transform: translateY(-5px); }
+        .tier-card h3 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #c9a84c; margin-bottom: 1rem; }
+        .tier-card .price { font-size: 2.5rem; font-weight: 700; color: #f5f0e8; margin-bottom: 0.5rem; }
+        .tier-card .period { color: #d4c5a9; margin-bottom: 2rem; }
+        .tier-card ul { list-style: none; text-align: left; margin-bottom: 2rem; }
+        .tier-card li { padding: 0.5rem 0; border-bottom: 1px solid rgba(201, 168, 76, 0.1); color: #d4c5a9; }
+        .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
+        .event-card { background: #1a1410; padding: 2rem; border-left: 3px solid #c9a84c; }
+        .event-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #c9a84c; margin-bottom: 1rem; }
+        .event-card p { color: #d4c5a9; margin-bottom: 1rem; }
+        .about { background: #1a1410; padding: 5rem; border-top: 1px solid rgba(201, 168, 76, 0.2); border-bottom: 1px solid rgba(201, 168, 76, 0.2); }
+        .about p { font-size: 1.2rem; max-width: 900px; margin: 0 auto 2rem; color: #d4c5a9; text-align: center; }
+        .final-cta { text-align: center; padding: 6rem 5%; background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%); }
+        .final-cta h2 { margin-bottom: 1.5rem; }
+        .final-cta p { font-size: 1.2rem; color: #d4c5a9; margin-bottom: 2.5rem; }
+        footer { background: #0a0a0a; padding: 3rem 5%; text-align: center; border-top: 1px solid rgba(201, 168, 76, 0.2); }
+        footer p { color: #d4c5a9; margin-bottom: 0.5rem; }
+        footer a { color: #c9a84c; text-decoration: none; }
+        .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #c9a84c; padding: 1rem; text-align: center; z-index: 999; border-top: 2px solid #b39740; }
+        .mobile-cta a { color: #0a0a0a; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            h2 { font-size: 2rem; }
+            section { padding: 3rem 5%; }
+            .mobile-cta { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">The Relocation Room</a>
+            <ul>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>The Relocation Room Private Club</h1>
+            <p>Gaithersburg's most exclusive retreat for discerning cigar enthusiasts</p>
+            <a href="#membership" class="cta-btn">Request Membership</a>
+        </div>
+    </section>
+
+    <section id="membership">
+        <h2>Private Membership Tiers</h2>
+        <div class="membership-grid">
+            <div class="tier-card">
+                <h3>Classic Member</h3>
+                <div class="price">$89</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>Private locker access</li>
+                    <li>15% off all cigars</li>
+                    <li>Member-only lounge hours</li>
+                    <li>Monthly exclusive events</li>
+                    <li>Complimentary birthday selection</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Apply Now</a>
+            </div>
+            <div class="tier-card">
+                <h3>Executive Member</h3>
+                <div class="price">$179</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>Everything in Classic</li>
+                    <li>20% off all purchases</li>
+                    <li>6 guest passes monthly</li>
+                    <li>Priority event reservations</li>
+                    <li>Quarterly rare cigar allocations</li>
+                    <li>Private consultation sessions</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Apply Now</a>
+            </div>
+            <div class="tier-card">
+                <h3>Chairman's Circle</h3>
+                <div class="price">$349</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>Everything in Executive</li>
+                    <li>30% off all purchases</li>
+                    <li>Unlimited guest privileges</li>
+                    <li>Exclusive lounge access</li>
+                    <li>Personal humidor concierge</li>
+                    <li>Private event hosting rights</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Private Events & Gatherings</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Member Tastings</h3>
+                <p>Intimate gatherings featuring rare cigars and premium spirits. Limited to 12 members per session for personalized attention.</p>
+                <p><strong>Members Only</strong></p>
+            </div>
+            <div class="event-card">
+                <h3>Executive Networking</h3>
+                <p>Connect with fellow members in an atmosphere of sophistication. Perfect for building lasting professional relationships.</p>
+                <p><strong>Monthly Events</strong></p>
+            </div>
+            <div class="event-card">
+                <h3>Private Celebrations</h3>
+                <p>Host your special occasions in our exclusive space. Full club access for you and your guests with white-glove service.</p>
+                <p><strong>Starting at $1,500</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>The Private Club Experience</h2>
+        <p>With a 4.9-star rating, The Relocation Room represents Gaithersburg's pinnacle of cigar culture. Our private club model ensures every member receives unparalleled attention and access to experiences unavailable anywhere else.</p>
+        <p>Membership is selective—we cultivate a community of individuals who appreciate excellence, value discretion, and understand that the finest experiences are worth waiting for.</p>
+    </section>
+
+    <section class="final-cta">
+        <h2>Join Maryland's Most Exclusive Club</h2>
+        <p>Limited memberships available for qualified applicants</p>
+        <a href="#contact" class="cta-btn">Submit Application</a>
+    </section>
+
+    <footer id="contact">
+        <p><strong>The Relocation Room Private Club</strong></p>
+        <p>7845 Airpark Rd L, Gaithersburg, MD 20879</p>
+        <p><a href="tel:2407807572">(240) 780-7572</a></p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #8a7a5f;">© 2026 The Relocation Room Private Club. All rights reserved.</p>
+    </footer>
+
+    <div class="mobile-cta">
+        <a href="tel:2407807572">Contact: (240) 780-7572</a>
+    </div>
+</body>
+</html>

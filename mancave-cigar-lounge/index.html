@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mancave Cigar Lounge | Fort Lauderdale's Finest Cigar Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght:400;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            background-color: #0a0a0a;
+            color: #f5f0e8;
+            line-height: 1.7;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.2rem 5%;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c9a84c;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #f5f0e8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #c9a84c;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%);
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: #c9a84c;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: #d4c5a9;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #c9a84c;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 2px;
+            transition: all 0.3s;
+            border: 2px solid #c9a84c;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: #c9a84c;
+        }
+        
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #c9a84c;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .event-card {
+            background: #1a1410;
+            padding: 2.5rem;
+            border-left: 3px solid #c9a84c;
+        }
+        
+        .event-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #c9a84c;
+            margin-bottom: 1rem;
+        }
+        
+        .event-card p {
+            color: #d4c5a9;
+            margin-bottom: 1rem;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .package-card {
+            background: #1a1410;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .package-card:hover {
+            border-color: #c9a84c;
+            transform: translateY(-5px);
+        }
+        
+        .package-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #c9a84c;
+            margin-bottom: 1rem;
+        }
+        
+        .package-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f5f0e8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .package-card .period {
+            color: #d4c5a9;
+            margin-bottom: 2rem;
+        }
+        
+        .package-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .package-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            color: #d4c5a9;
+        }
+        
+        .about {
+            background: #1a1410;
+            padding: 5rem;
+            border-top: 1px solid rgba(201, 168, 76, 0.2);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        }
+        
+        .about p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            color: #d4c5a9;
+            text-align: center;
+        }
+        
+        .final-cta {
+            text-align: center;
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%);
+        }
+        
+        .final-cta h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            color: #d4c5a9;
+            margin-bottom: 2.5rem;
+        }
+        
+        footer {
+            background: #0a0a0a;
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(201, 168, 76, 0.2);
+        }
+        
+        footer p {
+            color: #d4c5a9;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer a {
+            color: #c9a84c;
+            text-decoration: none;
+        }
+        
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #c9a84c;
+            padding: 1rem;
+            text-align: center;
+            z-index: 999;
+            border-top: 2px solid #b39740;
+        }
+        
+        .mobile-cta a {
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3rem 5%;
+            }
+            
+            .mobile-cta {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Mancave Cigar Lounge</a>
+            <ul>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>Mancave Cigar Lounge</h1>
+            <p>Fort Lauderdale's premier destination for exceptional cigars and private celebrations</p>
+            <a href="#events" class="cta-btn">Book Your Event</a>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Private Event Experiences</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Executive Retreats</h3>
+                <p>Transform your team meeting into an unforgettable experience. Private lounge access, premium cigar selection, and dedicated service for groups of 10-30.</p>
+                <p><strong>From $1,200 per event</strong></p>
+            </div>
+            <div class="event-card">
+                <h3>Celebration Nights</h3>
+                <p>Bachelor parties, milestone birthdays, promotions—celebrate life's victories in a space designed for memorable moments.</p>
+                <p><strong>From $600 per event</strong></p>
+            </div>
+            <div class="event-card">
+                <h3>Tasting & Pairing Sessions</h3>
+                <p>Curated cigar and spirit pairings led by our expert team. Perfect for groups of 8-15 looking to explore new flavors together.</p>
+                <p><strong>From $800 per session</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages">
+        <h2>Event Packages</h2>
+        <div class="packages-grid">
+            <div class="package-card">
+                <h3>Essentials</h3>
+                <div class="price">$499</div>
+                <div class="period">up to 8 guests</div>
+                <ul>
+                    <li>3-hour private lounge access</li>
+                    <li>Dedicated server</li>
+                    <li>Cigar selection included</li>
+                    <li>Complimentary setup</li>
+                    <li>Bluetooth audio access</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Book Now</a>
+            </div>
+            <div class="package-card">
+                <h3>Premium</h3>
+                <div class="price">$999</div>
+                <div class="period">up to 15 guests</div>
+                <ul>
+                    <li>4-hour private lounge buyout</li>
+                    <li>Full bar service</li>
+                    <li>Premium cigar selection</li>
+                    <li>Personalized concierge</li>
+                    <li>Custom playlist</li>
+                    <li>Professional photos</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Book Now</a>
+            </div>
+            <div class="package-card">
+                <h3>Elite</h3>
+                <div class="price">$1,999</div>
+                <div class="period">up to 30 guests</div>
+                <ul>
+                    <li>5-hour exclusive venue access</li>
+                    <li>Full premium bar</li>
+                    <li>Rare cigar allocations</li>
+                    <li>White-glove service team</li>
+                    <li>Catered appetizers</li>
+                    <li>Valet parking coordination</li>
+                </ul>
+                <a href="#contact" class="cta-btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>The Mancave Experience</h2>
+        <p>With a near-perfect 4.9-star rating and over 450 reviews, Mancave Cigar Lounge has earned its reputation as Fort Lauderdale's most trusted destination for cigar enthusiasts and private celebrations.</p>
+        <p>Located on East Commercial Boulevard, we've created a sanctuary where quality meets comfort, and every visit feels like an exclusive occasion. Our team doesn't just serve cigars—we craft experiences.</p>
+    </section>
+
+    <section class="final-cta">
+        <h2>Ready to Book Your Event?</h2>
+        <p>Let us create an unforgettable experience for your next celebration</p>
+        <a href="#contact" class="cta-btn">Get Started</a>
+    </section>
+
+    <footer id="contact">
+        <p><strong>Mancave Cigar Lounge</strong></p>
+        <p>2920 E Commercial Blvd, Fort Lauderdale, FL 33308</p>
+        <p><a href="tel:7542004144">(754) 200-4144</a></p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #8a7a5f;">© 2026 Mancave Cigar Lounge. All rights reserved.</p>
+    </footer>
+
+    <div class="mobile-cta">
+        <a href="tel:7542004144">Book Now: (754) 200-4144</a>
+    </div>
+</body>
+</html>
