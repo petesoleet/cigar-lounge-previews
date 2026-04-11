@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bond Bar | Premium Mobile Cigar Lounge Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Lora', serif; background-color: #0a0a0a; color: #f5f0e8; line-height: 1.6; }
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; color: #c9a84c; }
+nav { background-color: rgba(10, 10, 10, 0.95); padding: 1.2rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #c9a84c; }
+nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+nav .brand { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: #c9a84c; }
+nav ul { list-style: none; display: flex; gap: 2rem; }
+nav a { color: #f5f0e8; text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+nav a:hover { color: #c9a84c; }
+.hero { background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%); padding: 8rem 5% 6rem; text-align: center; border-bottom: 1px solid #c9a84c; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
+.hero p { font-size: 1.3rem; margin-bottom: 2.5rem; color: #d4c4a8; }
+.cta-button { background-color: #c9a84c; color: #0a0a0a; padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-family: 'Lora', serif; }
+.cta-button:hover { background-color: #b89840; transform: translateY(-2px); }
+.section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+.section h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+.section-subtitle { text-align: center; font-size: 1.1rem; color: #d4c4a8; margin-bottom: 3rem; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.service-card { background: linear-gradient(135deg, #1a1410 0%, #0f0c08 100%); padding: 2.5rem; border: 1px solid #c9a84c; text-align: center; }
+.service-card h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+.service-price { font-size: 2.5rem; color: #c9a84c; font-weight: 600; margin-bottom: 0.5rem; }
+.service-period { color: #d4c4a8; margin-bottom: 1.5rem; }
+.service-features { list-style: none; margin: 1.5rem 0; text-align: left; }
+.service-features li { padding: 0.5rem 0; border-bottom: 1px solid rgba(201, 168, 76, 0.2); color: #f5f0e8; }
+.service-features li:last-child { border-bottom: none; }
+.events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.event-card { background: linear-gradient(135deg, #1a1410 0%, #0f0c08 100%); padding: 2rem; border-left: 4px solid #c9a84c; }
+.event-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.event-card p { color: #d4c4a8; margin-bottom: 1rem; line-height: 1.8; }
+.about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+.about-content p { font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; color: #d4c4a8; }
+.final-cta { background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%); padding: 5rem 5%; text-align: center; border-top: 1px solid #c9a84c; }
+.final-cta h2 { font-size: 2.8rem; margin-bottom: 1.5rem; }
+.final-cta p { font-size: 1.2rem; margin-bottom: 2.5rem; color: #d4c4a8; }
+footer { background-color: #0a0a0a; padding: 3rem 5%; border-top: 1px solid #c9a84c; }
+.footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+.footer-section h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.footer-section p { color: #d4c4a8; margin-bottom: 0.5rem; }
+.mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background-color: #c9a84c; padding: 1rem; text-align: center; z-index: 999; }
+.mobile-cta a { color: #0a0a0a; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+@media (max-width: 768px) { nav ul { display: none; } .hero h1 { font-size: 2.5rem; } .mobile-cta { display: block; } body { padding-bottom: 70px; } }
+</style>
+</head>
+<body>
+<nav><div class="container"><div class="brand">The Bond Bar</div><ul><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#events">Events</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+<section class="hero" id="home"><h1>The Bond Bar</h1><p>The Premium Mobile Cigar Lounge — We Come to You</p><a href="#services" class="cta-button">Book an Experience</a></section>
+<section class="section" id="services"><h2>Mobile Cigar Services</h2><p class="section-subtitle">Bringing the premium cigar lounge experience directly to your event</p><div class="service-grid"><div class="service-card"><h3>Private Events</h3><div class="service-price">$500</div><div class="service-period">starting price</div><ul class="service-features"><li>Full mobile cigar bar setup</li><li>Premium cigar selection curated for your event</li><li>Expert host for up to 3 hours</li><li>Custom branded cigar bands available</li><li>Up to 25 guests</li></ul></div><div class="service-card"><h3>Corporate Package</h3><div class="service-price">$1,200</div><div class="service-period">starting price</div><ul class="service-features"><li>Full mobile cigar bar setup</li><li>Premium curated selection</li><li>Expert host for up to 5 hours</li><li>Custom branded cigar bands</li><li>Up to 75 guests</li><li>Pre-event consultation included</li></ul></div><div class="service-card"><h3>Wedding / VIP</h3><div class="service-price">$2,000</div><div class="service-period">starting price</div><ul class="service-features"><li>Full luxury mobile cigar bar</li><li>Top-shelf premium selection</li><li>Expert host for full event duration</li><li>Custom monogrammed cigar bands</li><li>Unlimited guest count</li><li>Full event coordination</li></ul></div></div></section>
+<section class="section" id="events"><h2>Perfect for Any Occasion</h2><p class="section-subtitle">We bring the lounge experience to your celebration</p><div class="events-grid"><div class="event-card"><h3>Weddings &amp; Receptions</h3><p>Add a signature touch to your wedding with a premium cigar bar. Your guests will remember it for years. We handle everything from setup to breakdown.</p></div><div class="event-card"><h3>Corporate Events</h3><p>Impress clients and reward your team with a sophisticated cigar experience. Perfect for product launches, company milestones, and executive retreats.</p></div><div class="event-card"><h3>Private Celebrations</h3><p>Birthdays, bachelor parties, anniversaries — whatever the occasion, The Bond Bar elevates it to an unforgettable experience.</p></div></div></section>
+<section class="section" id="about"><h2>Our Story</h2><div class="about-content"><p>The Bond Bar was founded on a simple idea: the premium cigar lounge experience shouldn't be limited to a fixed location. We bring all the elegance, selection, and expertise of a world-class cigar lounge directly to your event.</p><p>Our team of experts curates a premium selection for every event, ensuring your guests have an experience that perfectly matches the occasion.</p></div></section>
+<section class="final-cta"><h2>Book The Bond Bar</h2><p>Bring the premium cigar experience to your next event</p><a href="tel:+1-555-555-0100" class="cta-button">Get a Quote</a></section>
+<footer id="contact"><div class="footer-content"><div class="footer-section"><h3>The Bond Bar</h3><p>Mobile Cigar Lounge</p></div><div class="footer-section"><h3>Contact</h3><p>Email: info@thebondbar.com</p></div><div class="footer-section"><h3>Service Area</h3><p>Available for events nationwide</p><p>Contact us for your location</p></div></div></footer>
+<div class="mobile-cta"><a href="tel:+1-555-555-0100">Book Now</a></div>
+</body>
+</html>
