@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Experience Cigar Lounge | Hephzibah's Premier 24/7 Lounge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lora', serif; background: #0a0a0a; color: #f5f0e8; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #c9a84c; }
+        nav { background: rgba(10,10,10,0.95); padding: 1.2rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #c9a84c; }
+        nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        nav .brand { font-family: 'Playfair Display'; font-size: 1.5rem; font-weight: 700; color: #c9a84c; }
+        nav ul { list-style: none; display: flex; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #f5f0e8; text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: #c9a84c; }
+        .hero { background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%); padding: 8rem 5% 6rem; text-align: center; border-bottom: 1px solid #c9a84c; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2.5rem; color: #d4c4a8; }
+        .cta-button { background: #c9a84c; color: #0a0a0a; padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s; border: 2px solid #c9a84c; }
+        .cta-button:hover { background: transparent; color: #c9a84c; }
+        .section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+        .section h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+        .section-intro { text-align: center; max-width: 800px; margin: 0 auto 3rem; color: #d4c4a8; font-size: 1.1rem; }
+        .membership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .membership-card { background: linear-gradient(135deg, #1a1410 0%, #0f0c08 100%); padding: 2.5rem; border: 1px solid #c9a84c; text-align: center; transition: transform 0.3s; }
+        .membership-card:hover { transform: translateY(-5px); border-color: #c9a84c; }
+        .membership-card h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .price { font-size: 2.5rem; color: #c9a84c; margin: 1.5rem 0; font-weight: 700; }
+        .price span { font-size: 1rem; color: #d4c4a8; font-weight: 400; }
+        .membership-features { list-style: none; margin: 1.5rem 0; text-align: left; }
+        .membership-features li { padding: 0.7rem 0; border-bottom: 1px solid rgba(201,168,76,0.2); }
+        .membership-features li:before { content: "✓ "; color: #c9a84c; font-weight: bold; margin-right: 0.5rem; }
+        .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .event-card { background: linear-gradient(135deg, #1a1410 0%, #0f0c08 100%); padding: 2.5rem; border: 1px solid #c9a84c; transition: transform 0.3s; }
+        .event-card:hover { transform: translateY(-5px); }
+        .event-card h3 { font-size: 1.6rem; margin-bottom: 1rem; color: #c9a84c; }
+        .event-card p { color: #d4c4a8; line-height: 1.8; }
+        .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .about-content p { font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; color: #d4c4a8; }
+        .cta-section { background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%); padding: 5rem 5%; text-align: center; border-top: 1px solid #c9a84c; border-bottom: 1px solid #c9a84c; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .cta-section p { font-size: 1.2rem; color: #d4c4a8; margin-bottom: 2rem; }
+        footer { background: #0a0a0a; padding: 3rem 5%; border-top: 1px solid #c9a84c; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .footer-content h3 { color: #c9a84c; margin-bottom: 1rem; }
+        .footer-content p { color: #d4c4a8; line-height: 1.8; }
+        .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #c9a84c; padding: 1rem; text-align: center; z-index: 999; box-shadow: 0 -2px 10px rgba(0,0,0,0.5); }
+        .mobile-cta a { color: #0a0a0a; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+        @media (max-width: 768px) { nav ul { display: none; } .hero h1 { font-size: 2.2rem; } .section h2 { font-size: 2rem; } .mobile-cta { display: block; } body { padding-bottom: 70px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="brand">The Experience</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#memberships">Memberships</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>The Experience Cigar Lounge</h1>
+        <p>Hephzibah's Premier 24/7 Member Access</p>
+        <a href="#memberships" class="cta-button">Explore VIP Memberships</a>
+    </section>
+
+    <section class="section" id="memberships">
+        <h2>VIP Membership Programs</h2>
+        <p class="section-intro">Transform your daily visits into locked-in recurring revenue with structured membership tiers designed for Hephzibah's most discerning cigar enthusiasts.</p>
+        <div class="membership-grid">
+            <div class="membership-card">
+                <h3>Bronze Member</h3>
+                <div class="price">$599<span>/year</span></div>
+                <ul class="membership-features">
+                    <li>24/7 lounge access</li>
+                    <li>Personal climate-controlled locker</li>
+                    <li>15% discount on all cigars</li>
+                    <li>Priority event invitations</li>
+                    <li>Members-only releases</li>
+                </ul>
+            </div>
+            <div class="membership-card">
+                <h3>Silver Member</h3>
+                <div class="price">$1,199<span>/year</span></div>
+                <ul class="membership-features">
+                    <li>24/7 premium lounge access</li>
+                    <li>Executive locker (large format)</li>
+                    <li>20% discount on all purchases</li>
+                    <li>Quarterly tasting experiences</li>
+                    <li>First access to limited editions</li>
+                    <li>Complimentary guest passes (6/year)</li>
+                </ul>
+            </div>
+            <div class="membership-card">
+                <h3>Gold Member</h3>
+                <div class="price">$2,199<span>/year</span></div>
+                <ul class="membership-features">
+                    <li>24/7 VIP lounge suite access</li>
+                    <li>Double executive locker</li>
+                    <li>25% discount on all cigars</li>
+                    <li>Monthly sommelier sessions</li>
+                    <li>Private event hosting rights</li>
+                    <li>Concierge cigar procurement</li>
+                    <li>Annual destination trip invite</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="events">
+        <h2>Private Events & Experiences</h2>
+        <p class="section-intro">Host unforgettable gatherings in Hephzibah's most sophisticated cigar lounge.</p>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Corporate Gatherings</h3>
+                <p>Impress clients and reward your team with exclusive access to our private lounge. Full catering, AV setup, and dedicated staff ensure your business event leaves a lasting impression.</p>
+            </div>
+            <div class="event-card">
+                <h3>Milestone Celebrations</h3>
+                <p>Celebrate birthdays, anniversaries, and achievements in style. Our team curates the perfect cigar selection and crafts bespoke cocktails to match your occasion.</p>
+            </div>
+            <div class="event-card">
+                <h3>Tasting Experiences</h3>
+                <p>Monthly tasting events featuring rare cigars, premium spirits, and expert-led sessions. Members enjoy priority access and exclusive pricing on featured selections.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About The Experience</h2>
+        <div class="about-content">
+            <p>The Experience Cigar Lounge stands as Hephzibah's premier destination where members enjoy 24/7 access to exceptional cigars, refined spirits, and unparalleled hospitality. Our commitment to excellence shows in every detail—from our climate-controlled humidor to our meticulously trained staff.</p>
+            <p>Whether you're unwinding after a long day or celebrating success with colleagues, The Experience delivers a sophisticated environment designed exclusively for discerning cigar enthusiasts who appreciate quality and consistency.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Elevate Your Experience?</h2>
+        <p>Join Hephzibah's most exclusive cigar community today.</p>
+        <a href="mailto:info@theexperiencecigars.com" class="cta-button">Become a Member</a>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div>
+                <h3>Visit Us</h3>
+                <p>2476 GA-88 Building 1<br>Hephzibah, GA 30815</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Phone: 762-800-9898<br>Email: info@theexperiencecigars.com</p>
+            </div>
+            <div>
+                <h3>Hours</h3>
+                <p>Daily: 11am - 11pm<br>Members: 24/7 Access</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-cta">
+        <a href="mailto:info@theexperiencecigars.com">Join The Experience</a>
+    </div>
+</body>
+</html>
