@@ -1,1 +1,64 @@
-—
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taina's Mobile Cigar Bar | Authentic Puerto Rican Cigars — Tampa Bay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Lora', serif; background-color: #0a0a0a; color: #f5f0e8; line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; color: #c9a84c; }
+    nav { background-color: rgba(10, 10, 10, 0.95); padding: 1.2rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #c9a84c; }
+    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    nav .brand { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: #c9a84c; }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav a { color: #f5f0e8; text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+    nav a:hover { color: #c9a84c; }
+    .hero { background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%); padding: 8rem 5% 6rem; text-align: center; border-bottom: 1px solid #c9a84c; }
+    .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
+    .hero p { font-size: 1.3rem; margin-bottom: 2.5rem; color: #d4c4a8; }
+    .cta-button { background-color: #c9a84c; color: #0a0a0a; padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-family: 'Lora', serif; }
+    .cta-button:hover { background-color: #b89840; transform: translateY(-2px); }
+    .section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+    .section h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+    .section-subtitle { text-align: center; font-size: 1.1rem; color: #d4c4a8; margin-bottom: 3rem; }
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .service-card { background: linear-gradient(135deg, #1a1410 0%, #0f0c08 100%); padding: 2.5rem; border: 1px solid #c9a84c; text-align: center; }
+    .service-card h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+    .service-price { font-size: 2rem; color: #c9a84c; font-weight: 600; margin-bottom: 0.5rem; }
+    .service-period { color: #d4c4a8; margin-bottom: 1.5rem; }
+    .service-features { list-style: none; margin: 1.5rem 0; text-align: left; }
+    .service-features li { padding: 0.5rem 0; border-bottom: 1px solid rgba(201, 168, 76, 0.2); color: #f5f0e8; }
+    .service-features li:last-child { border-bottom: none; }
+    .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .event-card { background: linear-gradient(135deg, #1a1410 0%, #0f0c08 100%); padding: 2rem; border-left: 4px solid #c9a84c; }
+    .event-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .event-card p { color: #d4c4a8; margin-bottom: 1rem; line-height: 1.8; }
+    .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+    .about-content p { font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; color: #d4c4a8; }
+    .final-cta { background: linear-gradient(135deg, #1a1410 0%, #0a0a0a 100%); padding: 5rem 5%; text-align: center; border-top: 1px solid #c9a84c; }
+    .final-cta h2 { font-size: 2.8rem; margin-bottom: 1.5rem; }
+    .final-cta p { font-size: 1.2rem; margin-bottom: 2.5rem; color: #d4c4a8; }
+    footer { background-color: #0a0a0a; padding: 3rem 5%; border-top: 1px solid #c9a84c; }
+    .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .footer-section h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+    .footer-section p { color: #d4c4a8; margin-bottom: 0.5rem; }
+    @media (max-width: 768px) { nav ul { display: none; } .hero h1 { font-size: 2.5rem; } }
+    </style>
+  </head>
+  <body>
+    <nav><div class="container"><div class="brand">Taina's Mobile Cigar Bar</div>div><ul><li><a href="#home">Home</a>a></li><li><a href="#services">Services</a>a></li><li><a href="#events">Events</a>a></li><li><a href="#about">About</a>a></li><li><a href="#contact">Contact</a>a></li></ul></div>div></nav>
+  <section class="hero" id="home"><h1>Taina's Mobile Cigar Bar</h1><p>Authentic Hand-Rolled Puerto Rican Cigars — We Bring the Lounge to You</p><a href="#services" class="cta-button">Book an Experience</a>a></section>section>
+  <section class="section" id="services"><h2>Mobile Cigar Services</h2><p class="section-subtitle">Bringing the authentic Caribbean cigar experience directly to your event across the Tampa Bay area</p><div class="service-grid"><div class="service-card"><h3>Private Events</h3><div class="service-price">Contact for Pricing</div>div><div class="service-period">tailored to your event</div>div><ul class="service-features"><li>Full mobile cigar bar setup</li><li>Authentic Puerto Rican hand-rolled cigars</li><li>Guided cigar experience and pairing</li><li>Branded cigar bands available</li><li>Intimate gatherings and private parties</li></ul></div>div><div class="service-card"><h3>Corporate &amp; Brand Activations</h3><div class="service-price">Contact for Pricing</div>div><div class="service-period">custom packages</div>div><ul class="service-features"><li>Mobile cigar lounge for business events</li><li>Curated premium Caribbean selection</li><li>Branded product launches</li><li>Client entertainment and networking</li><li>Custom cigar gift packages</li></ul></div>div><div class="service-card"><h3>Weddings &amp; Celebrations</h3><div class="service-price">Contact for Pricing</div>div><div class="service-period">full-service experience</div>div><ul class="service-features"><li>Luxury mobile cigar bar</li><li>Premium hand-rolled cigars</li><li>Signature moment for your guests</li><li>Custom monogrammed cigar bands</li><li>Full setup and breakdown included</li></ul></div>div></div>div></section>section>
+  <section class="section" id="events"><h2>Where We Roll</h2><p class="section-subtitle">The premium cigar experience, built for any occasion</p><div class="events-grid"><div class="event-card"><h3>Car Meets &amp; Automotive Events</h3><p>A familiar sight at Tampa Bay car shows and European auto meets. We bring the lounge trackside — cigars, conversation, and community for enthusiasts.</p></div>div><div class="event-card"><h3>Weddings &amp; Private Parties</h3><p>Add an unforgettable signature touch to your celebration. Hand-rolled cigars and an authentic Caribbean experience your guests will remember.</p></div>div><div class="event-card"><h3>Corporate Events</h3><p>Elevate client entertainment with a mobile cigar bar that stands apart. Perfect for product launches, grand openings, and executive gatherings.</p></div>div></div>div></section>section>
+  <section class="section" id="about"><h2>Our Story</h2><div class="about-content"><p>Taina's Mobile Cigar Bar honors the heritage of the Taíno people — the indigenous Caribbean culture from which our name is drawn. We bring authentic, hand-rolled Puerto Rican cigars directly to events throughout the Tampa Bay area.</p><p>Every cigar we serve is curated from quality Caribbean growers, and every experience is hand-delivered by people who genuinely love this craft. Whether it's a wedding, a car meet, or a private celebration, we bring the lounge to you.</p></div>div></section>section>
+  <section class="final-cta"><h2>Book Taina's</h2><p>Bring an authentic Caribbean cigar experience to your next event in the Tampa Bay area</p><a href="#contact" class="cta-button">Get in Touch</a>a></section>section>
+  <footer id="contact"><div class="footer-content"><div class="footer-section"><h3>Taina's Mobile Cigar Bar</h3><p>Authentic Puerto Rican Cigars</p><p>Mobile Cigar Lounge</p></div>div><div class="footer-section"><h3>Service Area</h3><p>Tampa Bay &amp; Surrounding Florida</p><p>Based in St. Petersburg, FL</p></div>div><div class="footer-section"><h3>Contact</h3><p>Find us on Facebook</p><p>@Tainas Mobile Cigar Bar</p></div>div></div>div></footer>footer>
+  </body>
+</html>html></p></p></li></li></p></h1></li></li></ul></nav>
+  </body>
+  </style></title>
+  </head>
