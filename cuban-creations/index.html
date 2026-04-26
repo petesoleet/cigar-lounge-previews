@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuban Creations — The French Quarter's Only Indoor Cigar Bar | New Orleans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:#0a0a0a;color:#f5f0e8;font-family:'Lora',Georgia,serif;line-height:1.7;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-0.01em;line-height:1.15}
+  a{color:#c9a84c;text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.18)}
+  .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1200px;margin:0 auto}
+  .logo{font-family:'Playfair Display',serif;font-size:22px;color:#c9a84c;font-weight:700;letter-spacing:.02em}
+  .logo span{display:block;font-size:10px;color:#f5f0e8;letter-spacing:.3em;font-weight:400;font-family:'Lora',serif;margin-top:2px;text-transform:uppercase}
+  .nav-links{display:flex;gap:36px;list-style:none}
+  .nav-links a{color:#f5f0e8;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+  .nav-cta{background:#c9a84c;color:#0a0a0a !important;padding:10px 22px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  .nav-cta:hover{opacity:1;background:#d4b659}
+  @media(max-width:880px){.nav-links{display:none}}
+
+  .hero{min-height:94vh;display:flex;align-items:center;position:relative;padding:80px 0;background:radial-gradient(ellipse at 50% 30%,rgba(201,168,76,.09),transparent 60%),#0a0a0a}
+  .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(201,168,76,.02) 80px,rgba(201,168,76,.02) 81px);pointer-events:none}
+  .hero-inner{position:relative;z-index:2;text-align:center}
+  .hero .eyebrow{display:inline-block;color:#c9a84c;letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:30px;padding:8px 20px;border:1px solid rgba(201,168,76,.4);border-radius:2px}
+  .hero h1{font-size:clamp(40px,7vw,90px);margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:#c9a84c;font-weight:400}
+  .hero p.sub{font-size:clamp(16px,1.6vw,20px);max-width:720px;margin:0 auto 44px;color:rgba(245,240,232,.85)}
+  .reviews{display:flex;justify-content:center;gap:28px;margin-bottom:40px;flex-wrap:wrap}
+  .review-stat{text-align:center}
+  .review-stat .num{font-family:'Playfair Display',serif;font-size:32px;color:#c9a84c;display:block;line-height:1}
+  .review-stat .lab{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,240,232,.6);margin-top:6px;display:block}
+  .btn{display:inline-block;background:#c9a84c;color:#0a0a0a;padding:18px 44px;font-family:'Lora',serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .25s}
+  .btn:hover{background:#d4b659;transform:translateY(-2px);opacity:1}
+  .btn-outline{background:transparent;color:#c9a84c;border:1px solid #c9a84c;margin-left:14px}
+  .btn-outline:hover{background:#c9a84c;color:#0a0a0a}
+
+  section{padding:110px 0;position:relative}
+  .sec-eyebrow{color:#c9a84c;letter-spacing:.4em;font-size:11px;text-transform:uppercase;text-align:center;margin-bottom:18px;display:block}
+  .sec-title{text-align:center;font-size:clamp(32px,4.5vw,52px);margin-bottom:18px}
+  .sec-sub{text-align:center;max-width:640px;margin:0 auto 70px;color:rgba(245,240,232,.7);font-size:17px}
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  @media(max-width:880px){.grid-3{grid-template-columns:1fr;gap:20px}}
+  .card{background:linear-gradient(180deg,rgba(201,168,76,.04),rgba(201,168,76,.01));border:1px solid rgba(201,168,76,.22);padding:48px 36px;text-align:center;transition:all .3s;position:relative}
+  .card:hover{border-color:#c9a84c;transform:translateY(-6px)}
+  .card.featured{border-color:#c9a84c;background:linear-gradient(180deg,rgba(201,168,76,.1),rgba(201,168,76,.02))}
+  .card.featured::before{content:"MOST POPULAR";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c9a84c;color:#0a0a0a;font-size:10px;letter-spacing:.22em;padding:5px 14px;font-weight:600}
+  .card h3{font-size:26px;margin-bottom:10px}
+  .price{font-family:'Playfair Display',serif;font-size:42px;color:#c9a84c;margin:18px 0}
+  .price small{font-size:14px;color:rgba(245,240,232,.6);font-family:'Lora',serif}
+  .card ul{list-style:none;text-align:left;margin:24px 0 32px}
+  .card li{padding:9px 0;border-bottom:1px solid rgba(201,168,76,.1);font-size:15px;color:rgba(245,240,232,.85);position:relative;padding-left:22px}
+  .card li::before{content:"◆";color:#c9a84c;position:absolute;left:0;top:9px;font-size:9px}
+  .card li:last-child{border-bottom:none}
+
+  #events{background:linear-gradient(180deg,#0a0a0a,#0d0d0d 50%,#0a0a0a)}
+  .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  @media(max-width:880px){.events-grid{grid-template-columns:1fr}}
+  .event{padding:40px 32px;border:1px solid rgba(201,168,76,.18);background:#0d0d0d;position:relative}
+  .event-num{font-family:'Playfair Display',serif;font-size:54px;color:rgba(201,168,76,.25);font-weight:900;line-height:1;margin-bottom:14px}
+  .event h3{font-size:24px;margin-bottom:14px;color:#c9a84c}
+  .event p{font-size:15px;color:rgba(245,240,232,.78)}
+
+  #about{background:#0a0a0a}
+  .about-wrap{max-width:780px;margin:0 auto;text-align:center}
+  .about-wrap h2{margin-bottom:30px}
+  .about-wrap p{font-size:18px;line-height:1.85;color:rgba(245,240,232,.8);margin-bottom:22px}
+  .about-wrap .quote{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:#c9a84c;border-left:2px solid #c9a84c;padding-left:24px;text-align:left;margin:30px auto;max-width:620px}
+  .divider{width:60px;height:2px;background:#c9a84c;margin:50px auto}
+
+  #cta{background:linear-gradient(135deg,#0d0d0d 0%,#1a1408 50%,#0d0d0d 100%);text-align:center}
+  #cta h2{font-size:clamp(34px,5vw,58px);margin-bottom:24px}
+  #cta p{max-width:560px;margin:0 auto 44px;color:rgba(245,240,232,.78);font-size:18px}
+
+  footer{background:#080808;padding:70px 0 100px;border-top:1px solid rgba(201,168,76,.15)}
+  .foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:40px}
+  @media(max-width:780px){.foot-grid{grid-template-columns:1fr;text-align:center}}
+  .foot-grid h4{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:#c9a84c;margin-bottom:18px}
+  .foot-grid p,.foot-grid a{font-size:15px;color:rgba(245,240,232,.75);display:block;margin-bottom:6px}
+  .copyright{text-align:center;color:rgba(245,240,232,.4);font-size:13px;padding-top:30px;border-top:1px solid rgba(201,168,76,.1)}
+
+  .mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:#c9a84c;color:#0a0a0a;text-align:center;padding:16px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:13px;z-index:200;box-shadow:0 -4px 20px rgba(0,0,0,.6)}
+  @media(max-width:880px){.mobile-cta{display:block}body{padding-bottom:54px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="logo">Cuban Creations<span>French Quarter · NOLA</span></div>
+    <ul class="nav-links">
+      <li><a href="#membership">Members</a></li>
+      <li><a href="#events">Private Events</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#cta" class="nav-cta">Reserve</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Featured in Cigar Aficionado · Cigar Snob Magazine</span>
+    <h1>The Only Place In The Quarter<br>Where You Can <em>Smoke Inside.</em></h1>
+    <p class="sub">Behind the pistachio-green doors at 533 Toulouse, Cuban Creations brings Vegas-grade sophistication to the French Quarter — premium cigars, hand-curated whiskies, Cuban music, and the only legal indoor smoke in the neighborhood.</p>
+    <div class="reviews">
+      <div class="review-stat"><span class="num">4.7★</span><span class="lab">692 Google Reviews</span></div>
+      <div class="review-stat"><span class="num">2018</span><span class="lab">Founded</span></div>
+      <div class="review-stat"><span class="num">10am-2am</span><span class="lab">Open Daily</span></div>
+    </div>
+    <a href="#cta" class="btn">Reserve Your Couch</a>
+    <a href="#events" class="btn btn-outline">Book a Private Event</a>
+  </div>
+</section>
+
+<section id="membership">
+  <div class="container">
+    <span class="sec-eyebrow">Membership</span>
+    <h2 class="sec-title">For Locals & Returning Tourists Alike.</h2>
+    <p class="sec-sub">Locker storage, Mardi Gras krewe perks, and the kind of access that turns a French Quarter weekend into a homecoming.</p>
+    <div class="grid-3">
+      <div class="card">
+        <h3>The Local</h3>
+        <div class="price">$55<small>/month</small></div>
+        <ul>
+          <li>10% off cigars + spirits</li>
+          <li>Reserved leather couch on weeknights</li>
+          <li>Members-only Sazerac happy hour</li>
+          <li>First access to limited bourbon releases</li>
+        </ul>
+        <a href="#cta" class="btn">Join</a>
+      </div>
+      <div class="card featured">
+        <h3>The Aficionado</h3>
+        <div class="price">$110<small>/month</small></div>
+        <ul>
+          <li>Personal humidified locker</li>
+          <li>15% off everything in-house</li>
+          <li>Priority seating any night</li>
+          <li>Quarterly private cigar dinner</li>
+          <li>Bring 2 guests free Mon–Thu</li>
+        </ul>
+        <a href="#cta" class="btn">Join</a>
+      </div>
+      <div class="card">
+        <h3>The Krewe</h3>
+        <div class="price">$240<small>/month</small></div>
+        <ul>
+          <li>Largest locker tier (krewe-style)</li>
+          <li>20% off everything</li>
+          <li>Reserved sidewalk canopy table</li>
+          <li>Mardi Gras week reservation priority</li>
+          <li>2 complimentary BBQ plates monthly</li>
+        </ul>
+        <a href="#cta" class="btn">Join</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="container">
+    <span class="sec-eyebrow">Private Events</span>
+    <h2 class="sec-title">Take Over The Lounge. The Whole Building.</h2>
+    <p class="sec-sub">From convention after-parties to weddings to corporate cigar dinners — Cuban Creations specializes in private parties for groups in the heart of the Quarter.</p>
+    <div class="events-grid">
+      <div class="event">
+        <div class="event-num">01</div>
+        <h3>Convention After-Parties</h3>
+        <p>Bring your team straight from the convention center to a fully reserved lounge. Custom cigar pairings, BBQ catering, and bottle service. Ideal for groups of 20–60.</p>
+      </div>
+      <div class="event">
+        <div class="event-num">02</div>
+        <h3>Weddings & Krewes</h3>
+        <p>Bachelor parties, post-ceremony cigar nights, and Mardi Gras krewe takeovers. The full lounge, the canopied sidewalk, and the BBQ smoker — yours for the night.</p>
+      </div>
+      <div class="event">
+        <div class="event-num">03</div>
+        <h3>Full Building Buyout</h3>
+        <p>Front bar, back lounge, BBQ kitchen, and outdoor seating — exclusively yours. Custom Cuban music sets, three domino tables, and a full Sazerac bar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-wrap">
+      <span class="sec-eyebrow">Our Story</span>
+      <h2 class="sec-title">From Vegas To The French Quarter — With Better Cigars.</h2>
+      <div class="divider"></div>
+      <p>When Andrew Wilson left a career running marketing for MGM Resorts in Las Vegas, he had one mission: bring Sin City's sophisticated cigar culture to the city he loved most. The result is Cuban Creations — the French Quarter's only full-service cigar bar where smoking indoors is grandfathered in, the leather couches are deep, and the Sazerac is the bestseller.</p>
+      <p class="quote">"There is a big history of cigars in New Orleans. We are trying to bring back the traditional quality in a nicer setting."</p>
+      <p>What was once a swanky bath house — pool and all — has become a haven of leather, hand-carved tables, vintage Cuban posters, and a humidor stocked with Cuban-seed cigars from Nicaragua. Three domino tables. A canopied sidewalk lounge. A BBQ smoker. And the kind of crowd where tourists become regulars before their flight home.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <h2>Step Through The Pistachio Doors.<br>Don't Leave Until 2am.</h2>
+    <p>Reserve a couch, book a private event, or just walk in. We're open every day from 10am to 2am — and your seat is waiting.</p>
+    <a href="tel:5043724838" class="btn">Call (504) 372-4838</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Visit Us</h4>
+        <p>533 Toulouse Street<br>French Quarter<br>New Orleans, LA 70130</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Open Daily<br>10:00 AM – 2:00 AM<br>365 Days a Year</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:5043724838">504.372.4838</a>
+        <a href="mailto:sales@cigarbarnola.com">sales@cigarbarnola.com</a>
+      </div>
+    </div>
+    <div class="copyright">© Cuban Creations Cigar Bar · The French Quarter's Premier Indoor Cigar Lounge Since 2018</div>
+  </div>
+</footer>
+
+<a href="#cta" class="mobile-cta">Reserve a Table →</a>
+
+</body>
+</html>
