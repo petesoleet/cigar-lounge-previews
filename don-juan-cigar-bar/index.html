@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don Juan Cigar Bar — Louisiana's Largest Premium Cigar Selection | Baton Rouge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:#0a0a0a;color:#f5f0e8;font-family:'Lora',Georgia,serif;line-height:1.7;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-0.01em;line-height:1.15}
+  a{color:#c9a84c;text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.18)}
+  .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1200px;margin:0 auto}
+  .logo{font-family:'Playfair Display',serif;font-size:22px;color:#c9a84c;font-weight:700;letter-spacing:.02em}
+  .logo span{display:block;font-size:10px;color:#f5f0e8;letter-spacing:.3em;font-weight:400;font-family:'Lora',serif;margin-top:2px;text-transform:uppercase}
+  .nav-links{display:flex;gap:36px;list-style:none}
+  .nav-links a{color:#f5f0e8;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+  .nav-cta{background:#c9a84c;color:#0a0a0a !important;padding:10px 22px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  .nav-cta:hover{opacity:1;background:#d4b659}
+  @media(max-width:880px){.nav-links{display:none}}
+
+  .hero{min-height:92vh;display:flex;align-items:center;position:relative;padding:80px 0;background:radial-gradient(ellipse at 50% 30%,rgba(201,168,76,.09),transparent 60%),#0a0a0a}
+  .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(201,168,76,.02) 80px,rgba(201,168,76,.02) 81px);pointer-events:none}
+  .hero-inner{position:relative;z-index:2;text-align:center}
+  .hero .eyebrow{display:inline-block;color:#c9a84c;letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:30px;padding:8px 20px;border:1px solid rgba(201,168,76,.4);border-radius:2px}
+  .hero h1{font-size:clamp(40px,7vw,86px);margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:#c9a84c;font-weight:400}
+  .hero p.sub{font-size:clamp(16px,1.6vw,20px);max-width:720px;margin:0 auto 44px;color:rgba(245,240,232,.85)}
+  .brands{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-bottom:40px;color:rgba(245,240,232,.5);font-family:'Playfair Display',serif;font-style:italic;font-size:15px;letter-spacing:.08em}
+  .btn{display:inline-block;background:#c9a84c;color:#0a0a0a;padding:18px 44px;font-family:'Lora',serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .25s}
+  .btn:hover{background:#d4b659;transform:translateY(-2px);opacity:1}
+  .btn-outline{background:transparent;color:#c9a84c;border:1px solid #c9a84c;margin-left:14px}
+  .btn-outline:hover{background:#c9a84c;color:#0a0a0a}
+
+  section{padding:110px 0;position:relative}
+  .sec-eyebrow{color:#c9a84c;letter-spacing:.4em;font-size:11px;text-transform:uppercase;text-align:center;margin-bottom:18px;display:block}
+  .sec-title{text-align:center;font-size:clamp(32px,4.5vw,52px);margin-bottom:18px}
+  .sec-sub{text-align:center;max-width:640px;margin:0 auto 70px;color:rgba(245,240,232,.7);font-size:17px}
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  @media(max-width:880px){.grid-3{grid-template-columns:1fr;gap:20px}}
+  .card{background:linear-gradient(180deg,rgba(201,168,76,.04),rgba(201,168,76,.01));border:1px solid rgba(201,168,76,.22);padding:48px 36px;text-align:center;transition:all .3s;position:relative}
+  .card:hover{border-color:#c9a84c;transform:translateY(-6px)}
+  .card.featured{border-color:#c9a84c;background:linear-gradient(180deg,rgba(201,168,76,.1),rgba(201,168,76,.02))}
+  .card.featured::before{content:"BEST SELLER";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c9a84c;color:#0a0a0a;font-size:10px;letter-spacing:.22em;padding:5px 14px;font-weight:600}
+  .card h3{font-size:26px;margin-bottom:10px}
+  .price{font-family:'Playfair Display',serif;font-size:42px;color:#c9a84c;margin:18px 0}
+  .price small{font-size:14px;color:rgba(245,240,232,.6);font-family:'Lora',serif}
+  .card ul{list-style:none;text-align:left;margin:24px 0 32px}
+  .card li{padding:9px 0;border-bottom:1px solid rgba(201,168,76,.1);font-size:15px;color:rgba(245,240,232,.85);position:relative;padding-left:22px}
+  .card li::before{content:"◆";color:#c9a84c;position:absolute;left:0;top:9px;font-size:9px}
+  .card li:last-child{border-bottom:none}
+
+  #events{background:linear-gradient(180deg,#0a0a0a,#0d0d0d 50%,#0a0a0a)}
+  .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  @media(max-width:880px){.events-grid{grid-template-columns:1fr}}
+  .event{padding:40px 32px;border:1px solid rgba(201,168,76,.18);background:#0d0d0d;position:relative}
+  .event-num{font-family:'Playfair Display',serif;font-size:54px;color:rgba(201,168,76,.25);font-weight:900;line-height:1;margin-bottom:14px}
+  .event h3{font-size:24px;margin-bottom:14px;color:#c9a84c}
+  .event p{font-size:15px;color:rgba(245,240,232,.78)}
+
+  #about{background:#0a0a0a}
+  .about-wrap{max-width:780px;margin:0 auto;text-align:center}
+  .about-wrap h2{margin-bottom:30px}
+  .about-wrap p{font-size:18px;line-height:1.85;color:rgba(245,240,232,.8);margin-bottom:22px}
+  .divider{width:60px;height:2px;background:#c9a84c;margin:50px auto}
+
+  #cta{background:linear-gradient(135deg,#0d0d0d 0%,#1a1408 50%,#0d0d0d 100%);text-align:center}
+  #cta h2{font-size:clamp(34px,5vw,58px);margin-bottom:24px}
+  #cta p{max-width:560px;margin:0 auto 44px;color:rgba(245,240,232,.78);font-size:18px}
+
+  footer{background:#080808;padding:70px 0 100px;border-top:1px solid rgba(201,168,76,.15)}
+  .foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:40px}
+  @media(max-width:780px){.foot-grid{grid-template-columns:1fr;text-align:center}}
+  .foot-grid h4{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:#c9a84c;margin-bottom:18px}
+  .foot-grid p,.foot-grid a{font-size:15px;color:rgba(245,240,232,.75);display:block;margin-bottom:6px}
+  .copyright{text-align:center;color:rgba(245,240,232,.4);font-size:13px;padding-top:30px;border-top:1px solid rgba(201,168,76,.1)}
+
+  .mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:#c9a84c;color:#0a0a0a;text-align:center;padding:16px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:13px;z-index:200;box-shadow:0 -4px 20px rgba(0,0,0,.6)}
+  @media(max-width:880px){.mobile-cta{display:block}body{padding-bottom:54px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="logo">Don Juan<span>Baton Rouge · LA</span></div>
+    <ul class="nav-links">
+      <li><a href="#shop">Shop Cigars</a></li>
+      <li><a href="#events">The Lounge</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#cta" class="nav-cta">Visit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Towne Center · Baton Rouge's Cigar Destination</span>
+    <h1>Louisiana's Largest<br>Premium Cigar <em>Selection.</em></h1>
+    <p class="sub">A full cigar bar on one side. The state's most stocked humidor on the other. Don Juan brings together Fuente, Padron, Davidoff, Cohiba, and the entire boutique world — under one roof, paired with a full bar and the lounge to enjoy them in.</p>
+    <div class="brands">Arturo Fuente · Padron · Davidoff · Cohiba · Ashton · Montecristo · Oliva · Rocky Patel</div>
+    <a href="#shop" class="btn">Shop The Humidor</a>
+    <a href="#cta" class="btn btn-outline">Visit The Lounge</a>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="container">
+    <span class="sec-eyebrow">The Humidor</span>
+    <h2 class="sec-title">Shop Premium Cigars. Pickup Or Ship.</h2>
+    <p class="sec-sub">Three ways to bring Don Juan home — single sticks, curated bundles, or a personal humidor locker for the regulars who want their stash always ready in the lounge.</p>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Single Sticks</h3>
+        <div class="price">$8<small>+ each</small></div>
+        <ul>
+          <li>Hand-selected from our humidor</li>
+          <li>Mild to full-bodied across all major brands</li>
+          <li>Same-day pickup or shipping</li>
+          <li>Recommendations by our staff</li>
+        </ul>
+        <a href="#cta" class="btn">Browse</a>
+      </div>
+      <div class="card featured">
+        <h3>Curated Bundles</h3>
+        <div class="price">$95<small>/sampler</small></div>
+        <ul>
+          <li>5-cigar samplers across flavor profiles</li>
+          <li>Exclusive Don Juan house picks</li>
+          <li>Ideal gift for cigar lovers</li>
+          <li>Free Baton Rouge delivery over $150</li>
+          <li>Subscription option available</li>
+        </ul>
+        <a href="#cta" class="btn">Order</a>
+      </div>
+      <div class="card">
+        <h3>Personal Locker</h3>
+        <div class="price">$75<small>/month</small></div>
+        <ul>
+          <li>Humidified locker in our lounge</li>
+          <li>Buy in bulk — store on-site</li>
+          <li>15% members-only discount</li>
+          <li>Reserved seating during cigar events</li>
+          <li>First access to limited releases</li>
+        </ul>
+        <a href="#cta" class="btn">Reserve</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="container">
+    <span class="sec-eyebrow">The Lounge</span>
+    <h2 class="sec-title">Smoke. Sip. Settle In.</h2>
+    <p class="sec-sub">Our lounge runs nightly with full bar service, plush leather seating, and wall-to-wall TVs for the games. Plus regular brand events, private bookings, and the kind of room that makes you stay an extra hour.</p>
+    <div class="events-grid">
+      <div class="event">
+        <div class="event-num">01</div>
+        <h3>Cigar Brand Nights</h3>
+        <p>Monthly events with the names you smoke — Padron, Fuente, Rocky Patel reps in-house with raffles, specials, and education on what's in the humidor.</p>
+      </div>
+      <div class="event">
+        <div class="event-num">02</div>
+        <h3>Private Group Reservations</h3>
+        <p>Book the lounge for birthdays, corporate cigar nights, or bachelor parties. Catered food, full bar, and reserved seating for 10–40 guests.</p>
+      </div>
+      <div class="event">
+        <div class="event-num">03</div>
+        <h3>The 9th Annual Toast</h3>
+        <p>Our annual Toast Across America event for veterans — sign up before November 11th for the largest cigar gathering Baton Rouge sees all year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-wrap">
+      <span class="sec-eyebrow">Our Story</span>
+      <h2 class="sec-title">A Refuge For The Smoker Of Fine Handmade Cigars.</h2>
+      <div class="divider"></div>
+      <p>Don Juan Cigar Co. was built on a single mission: create a space where the appreciation of a handmade cigar is taken seriously — without taking itself too seriously. From our Baton Rouge home in Towne Center, we've grown into Louisiana's most stocked humidor and most welcoming lounge.</p>
+      <p>Our team takes pride in helping every customer — first-timer or thirty-year aficionado — find the cigar that fits their palate. Add a full bar of whiskey, beer, and wine, leather chairs, wall-to-wall TVs, and the kind of regulars who'll save your seat. That's Don Juan.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <h2>Stop In. Light Up.<br>Stay Awhile.</h2>
+    <p>Walk-ins always welcome. The humidor's open 'til 8pm. The lounge runs later. Need recommendations? Our team has spent decades getting it right.</p>
+    <a href="tel:2253025956" class="btn">Call (225) 302-5956</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Visit Us</h4>
+        <p>7539 Corporate Blvd<br>Suite #160 (Lounge) / #170 (Shop)<br>Baton Rouge, LA 70809</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon-Sat · 9 AM – 8 PM<br>Sun · Noon – 6 PM<br>Lounge open later</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:2253025956">225.302.5956</a>
+        <a href="tel:2259607597">225.960.7597 (Bar)</a>
+        <a href="mailto:donjuanbatonrouge@gmail.com">donjuanbatonrouge@gmail.com</a>
+      </div>
+    </div>
+    <div class="copyright">© Don Juan Cigar Company · Baton Rouge's Choice for Premium Cigars</div>
+  </div>
+</footer>
+
+<a href="#cta" class="mobile-cta">Visit The Humidor →</a>
+
+</body>
+</html>
