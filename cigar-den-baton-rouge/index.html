@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cigar Den — Baton Rouge's Highland Road Cigar Lounge & Premium Humidor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:#0a0a0a;color:#f5f0e8;font-family:'Lora',Georgia,serif;line-height:1.7;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-0.01em;line-height:1.15}
+  a{color:#c9a84c;text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.18)}
+  .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1200px;margin:0 auto}
+  .logo{font-family:'Playfair Display',serif;font-size:22px;color:#c9a84c;font-weight:700;letter-spacing:.02em}
+  .logo span{display:block;font-size:10px;color:#f5f0e8;letter-spacing:.3em;font-weight:400;font-family:'Lora',serif;margin-top:2px;text-transform:uppercase}
+  .nav-links{display:flex;gap:36px;list-style:none}
+  .nav-links a{color:#f5f0e8;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+  .nav-cta{background:#c9a84c;color:#0a0a0a !important;padding:10px 22px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  .nav-cta:hover{opacity:1;background:#d4b659}
+  @media(max-width:880px){.nav-links{display:none}}
+  .hero{min-height:92vh;display:flex;align-items:center;position:relative;padding:80px 0;background:radial-gradient(ellipse at 50% 30%,rgba(201,168,76,.09),transparent 60%),#0a0a0a}
+  .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(201,168,76,.02) 80px,rgba(201,168,76,.02) 81px);pointer-events:none}
+  .hero-inner{position:relative;z-index:2;text-align:center}
+  .hero .eyebrow{display:inline-block;color:#c9a84c;letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:30px;padding:8px 20px;border:1px solid rgba(201,168,76,.4);border-radius:2px}
+  .hero h1{font-size:clamp(40px,7vw,86px);margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:#c9a84c;font-weight:400}
+  .hero p.sub{font-size:clamp(16px,1.6vw,20px);max-width:680px;margin:0 auto 44px;color:rgba(245,240,232,.85)}
+  .btn{display:inline-block;background:#c9a84c;color:#0a0a0a;padding:18px 44px;font-family:'Lora',serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .25s}
+  .btn:hover{background:#d4b659;transform:translateY(-2px);opacity:1}
+  .btn-outline{background:transparent;color:#c9a84c;border:1px solid #c9a84c;margin-left:14px}
+  .btn-outline:hover{background:#c9a84c;color:#0a0a0a}
+  section{padding:110px 0;position:relative}
+  .sec-eyebrow{color:#c9a84c;letter-spacing:.4em;font-size:11px;text-transform:uppercase;text-align:center;margin-bottom:18px;display:block}
+  .sec-title{text-align:center;font-size:clamp(32px,4.5vw,52px);margin-bottom:18px}
+  .sec-sub{text-align:center;max-width:640px;margin:0 auto 70px;color:rgba(245,240,232,.7);font-size:17px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  @media(max-width:880px){.grid-3{grid-template-columns:1fr;gap:20px}}
+  .card{background:linear-gradient(180deg,rgba(201,168,76,.04),rgba(201,168,76,.01));border:1px solid rgba(201,168,76,.22);padding:48px 36px;text-align:center;transition:all .3s;position:relative}
+  .card:hover{border-color:#c9a84c;transform:translateY(-6px)}
+  .card.featured{border-color:#c9a84c;background:linear-gradient(180deg,rgba(201,168,76,.1),rgba(201,168,76,.02))}
+  .card.featured::before{content:"MOST POPULAR";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c9a84c;color:#0a0a0a;font-size:10px;letter-spacing:.22em;padding:5px 14px;font-weight:600}
+  .card h3{font-size:26px;margin-bottom:10px}
+  .price{font-family:'Playfair Display',serif;font-size:42px;color:#c9a84c;margin:18px 0}
+  .price small{font-size:14px;color:rgba(245,240,232,.6);font-family:'Lora',serif}
+  .card ul{list-style:none;text-align:left;margin:24px 0 32px}
+  .card li{padding:9px 0;border-bottom:1px solid rgba(201,168,76,.1);font-size:15px;color:rgba(245,240,232,.85);position:relative;padding-left:22px}
+  .card li::before{content:"◆";color:#c9a84c;position:absolute;left:0;top:9px;font-size:9px}
+  .card li:last-child{border-bottom:none}
+  #events{background:linear-gradient(180deg,#0a0a0a,#0d0d0d 50%,#0a0a0a)}
+  .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  @media(max-width:880px){.events-grid{grid-template-columns:1fr}}
+  .event{padding:40px 32px;border:1px solid rgba(201,168,76,.18);background:#0d0d0d;position:relative}
+  .event-num{font-family:'Playfair Display',serif;font-size:54px;color:rgba(201,168,76,.25);font-weight:900;line-height:1;margin-bottom:14px}
+  .event h3{font-size:24px;margin-bottom:14px;color:#c9a84c}
+  .event p{font-size:15px;color:rgba(245,240,232,.78)}
+  #about{background:#0a0a0a}
+  .about-wrap{max-width:780px;margin:0 auto;text-align:center}
+  .about-wrap h2{margin-bottom:30px}
+  .about-wrap p{font-size:18px;line-height:1.85;color:rgba(245,240,232,.8);margin-bottom:22px}
+  .about-wrap .quote{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:#c9a84c;border-left:2px solid #c9a84c;padding-left:24px;text-align:left;margin:30px auto;max-width:620px}
+  .divider{width:60px;height:2px;background:#c9a84c;margin:50px auto}
+  #cta{background:linear-gradient(135deg,#0d0d0d 0%,#1a1408 50%,#0d0d0d 100%);text-align:center}
+  #cta h2{font-size:clamp(34px,5vw,58px);margin-bottom:24px}
+  #cta p{max-width:560px;margin:0 auto 44px;color:rgba(245,240,232,.78);font-size:18px}
+  footer{background:#080808;padding:70px 0 100px;border-top:1px solid rgba(201,168,76,.15)}
+  .foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:40px}
+  @media(max-width:780px){.foot-grid{grid-template-columns:1fr;text-align:center}}
+  .foot-grid h4{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:#c9a84c;margin-bottom:18px}
+  .foot-grid p,.foot-grid a{font-size:15px;color:rgba(245,240,232,.75);display:block;margin-bottom:6px}
+  .copyright{text-align:center;color:rgba(245,240,232,.4);font-size:13px;padding-top:30px;border-top:1px solid rgba(201,168,76,.1)}
+  .mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:#c9a84c;color:#0a0a0a;text-align:center;padding:16px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:13px;z-index:200;box-shadow:0 -4px 20px rgba(0,0,0,.6)}
+  @media(max-width:880px){.mobile-cta{display:block}body{padding-bottom:54px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="logo">Cigar Den<span>Highland Rd · Baton Rouge</span></div>
+    <ul class="nav-links">
+      <li><a href="#membership">Memberships</a></li>
+      <li><a href="#events">Private Events</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#cta" class="nav-cta">Visit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Highland Rd & Airline Hwy · Est. 2020</span>
+    <h1>Baton Rouge's Premium<br>Cigar <em>Den.</em></h1>
+    <p class="sub">A complete smoking experience — well-maintained humidor, top-notch ventilation, lockers for the regulars, and the kind of seating area where conversations stretch into the night. Stolen Throne. Tabernacle. Bolcock Brothers. The kind of cigars you won't find in a smoke shop.</p>
+    <a href="#membership" class="btn">Reserve a Locker</a>
+    <a href="#cta" class="btn btn-outline">Visit The Den</a>
+  </div>
+</section>
+
+<section id="membership">
+  <div class="container">
+    <span class="sec-eyebrow">Membership</span>
+    <h2 class="sec-title">Become a Member of The Den.</h2>
+    <p class="sec-sub">Three locker tiers built for the regulars who treat the Den like a second living room. Save your stash, save your seat, and skip the smoke shop run.</p>
+    <div class="grid-3">
+      <div class="card">
+        <h3>The Regular</h3>
+        <div class="price">$50<small>/month</small></div>
+        <ul>
+          <li>Personal humidified locker</li>
+          <li>10% off all cigars</li>
+          <li>Members-only Saturday hour</li>
+          <li>First access to new humidor arrivals</li>
+        </ul>
+        <a href="#cta" class="btn">Reserve</a>
+      </div>
+      <div class="card featured">
+        <h3>The Aficionado</h3>
+        <div class="price">$95<small>/month</small></div>
+        <ul>
+          <li>Premium locker (double size)</li>
+          <li>15% off everything in-house</li>
+          <li>Reserved chair on weekends</li>
+          <li>Quarterly private cigar pairing</li>
+          <li>Bring 2 guests free Mon–Wed</li>
+        </ul>
+        <a href="#cta" class="btn">Reserve</a>
+      </div>
+      <div class="card">
+        <h3>The Den Patron</h3>
+        <div class="price">$175<small>/month</small></div>
+        <ul>
+          <li>Largest locker tier</li>
+          <li>20% off cigars + accessories</li>
+          <li>Reserved spot any night</li>
+          <li>2 complimentary cigars monthly</li>
+          <li>VIP access to all Den events</li>
+        </ul>
+        <a href="#cta" class="btn">Reserve</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="container">
+    <span class="sec-eyebrow">The Lounge & Events</span>
+    <h2 class="sec-title">More Than A Smoke Shop.</h2>
+    <p class="sec-sub">From cigar manufacturer events to private group bookings to birthday gatherings — the Den hosts the kind of nights regulars circle on the calendar.</p>
+    <div class="events-grid">
+      <div class="event">
+        <div class="event-num">01</div>
+        <h3>Manufacturer Events</h3>
+        <p>Stolen Throne, Tabernacle, and other boutique brand reps host monthly Cut & Light events with raffles, samplers, and rare release access.</p>
+      </div>
+      <div class="event">
+        <div class="event-num">02</div>
+        <h3>Birthdays & Group Bookings</h3>
+        <p>Reserve the lounge for groups of 8–25 — birthdays, retirement parties, or just a cigar-fueled night with the guys. BYOB-friendly with food trucks on call.</p>
+      </div>
+      <div class="event">
+        <div class="event-num">03</div>
+        <h3>Corporate Cigar Nights</h3>
+        <p>Take over the Den for client entertaining or team milestones. Custom cigar selections, premium pours, and the relaxed atmosphere that closes deals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-wrap">
+      <span class="sec-eyebrow">Our Story</span>
+      <h2 class="sec-title">20 Years Of Cigar Knowledge — Rolled Into One Den.</h2>
+      <div class="divider"></div>
+      <p>The Cigar Den opened in 2020, but the man behind it brings two decades of knowing exactly what a cigar enthusiast wants when they walk in the door. Top-notch ventilation. A humidor that's growing every month. Tobacco-row portraits on the wall. And the rare blends most Baton Rouge shops just don't carry.</p>
+      <p class="quote">"It's a time where you can sit back, and if you choose to, just relax and smoke it on your own. There's always somebody else in a cigar shop you can have a good conversation with."</p>
+      <p>— Ricky Thibodeaux, Owner</p>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <h2>Walk In. Light Up.<br>You Belong Here.</h2>
+    <p>Looking for a Stolen Throne? Need a recommendation? Want to claim a locker? Stop by Highland Road or call ahead — the Den is always open to first-timers and regulars alike.</p>
+    <a href="tel:2253304926" class="btn">Call (225) 330-4926</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Visit Us</h4>
+        <p>19970 Highland Road<br>Suite B2<br>Baton Rouge, LA 70809</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon-Fri · 10 AM – 7 PM<br>Sat · 10 AM – 6 PM<br>Sun · Noon – 6 PM</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:2253304926">225.330.4926</a>
+        <a href="mailto:cigardenebr@gmail.com">cigardenebr@gmail.com</a>
+      </div>
+    </div>
+    <div class="copyright">© Cigar Den · Baton Rouge's Highland Road Cigar Lounge · Est. 2020</div>
+  </div>
+</footer>
+
+<a href="#cta" class="mobile-cta">Reserve a Locker →</a>
+
+</body>
+</html>
