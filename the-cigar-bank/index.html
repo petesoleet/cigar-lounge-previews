@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cigar Bank — Downtown McDonough's Historic Cigar Lounge & Vault Humidor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:#0a0a0a;color:#f5f0e8;font-family:'Lora',Georgia,serif;line-height:1.7;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-0.01em;line-height:1.15}
+  a{color:#c9a84c;text-decoration:none;transition:opacity .2s}a:hover{opacity:.75}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.22)}
+  .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1200px;margin:0 auto}
+  .logo{font-family:'Playfair Display',serif;font-size:22px;color:#c9a84c;font-weight:700;letter-spacing:.02em}
+  .logo span{display:block;font-size:10px;color:#f5f0e8;letter-spacing:.3em;font-weight:400;font-family:'Lora',serif;margin-top:2px;text-transform:uppercase}
+  .nav-links{display:flex;gap:36px;list-style:none}.nav-links a{color:#f5f0e8;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+  .nav-cta{background:#c9a84c;color:#0a0a0a !important;padding:10px 22px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}.nav-cta:hover{opacity:1;background:#d4b659}
+  @media(max-width:880px){.nav-links{display:none}}
+
+  /* HERO — vault-themed treatment */
+  .hero{min-height:96vh;display:flex;align-items:center;position:relative;padding:80px 0;background:radial-gradient(ellipse at 50% 30%,rgba(201,168,76,.12),transparent 60%),#0a0a0a;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(201,168,76,.025) 80px,rgba(201,168,76,.025) 81px);pointer-events:none}
+  /* Vault circle decoration */
+  .vault-bg{position:absolute;width:900px;height:900px;border:1px solid rgba(201,168,76,.08);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+  .vault-bg::before{content:"";position:absolute;inset:60px;border:1px solid rgba(201,168,76,.06);border-radius:50%}
+  .vault-bg::after{content:"";position:absolute;inset:140px;border:1px dashed rgba(201,168,76,.05);border-radius:50%}
+  .hero-inner{position:relative;z-index:2;text-align:center}
+  .est-badge{display:inline-flex;align-items:center;gap:14px;color:#c9a84c;letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:30px}
+  .est-badge .line{width:30px;height:1px;background:#c9a84c}
+  .hero h1{font-size:clamp(40px,7.5vw,96px);margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:#c9a84c;font-weight:400}
+  .hero p.sub{font-size:clamp(16px,1.6vw,20px);max-width:720px;margin:0 auto 44px;color:rgba(245,240,232,.85)}
+  .vault-stats{display:flex;justify-content:center;gap:36px;margin-bottom:44px;flex-wrap:wrap}
+  .vault-stat{text-align:center;padding:14px 22px;border:1px solid rgba(201,168,76,.25)}
+  .vault-stat .num{font-family:'Playfair Display',serif;font-size:26px;color:#c9a84c;display:block;line-height:1}
+  .vault-stat .lab{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,240,232,.6);margin-top:6px;display:block}
+  .btn{display:inline-block;background:#c9a84c;color:#0a0a0a;padding:18px 44px;font-family:'Lora',serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .25s}
+  .btn:hover{background:#d4b659;transform:translateY(-2px);opacity:1}
+  .btn-outline{background:transparent;color:#c9a84c;border:1px solid #c9a84c;margin-left:14px}.btn-outline:hover{background:#c9a84c;color:#0a0a0a}
+
+  section{padding:110px 0;position:relative}
+  .sec-eyebrow{color:#c9a84c;letter-spacing:.4em;font-size:11px;text-transform:uppercase;text-align:center;margin-bottom:18px;display:block}
+  .sec-title{text-align:center;font-size:clamp(32px,4.5vw,52px);margin-bottom:18px}
+  .sec-sub{text-align:center;max-width:640px;margin:0 auto 70px;color:rgba(245,240,232,.7);font-size:17px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}@media(max-width:880px){.grid-3{grid-template-columns:1fr;gap:20px}}
+  /* Locker cards styled like safe deposit boxes */
+  .card{background:linear-gradient(180deg,rgba(201,168,76,.05),rgba(201,168,76,.01));border:1px solid rgba(201,168,76,.25);padding:48px 36px;text-align:center;transition:all .3s;position:relative}
+  .card:hover{border-color:#c9a84c;transform:translateY(-6px)}
+  .card.featured{border-color:#c9a84c;background:linear-gradient(180deg,rgba(201,168,76,.12),rgba(201,168,76,.02))}
+  .card.featured::before{content:"MOST RESERVED";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c9a84c;color:#0a0a0a;font-size:10px;letter-spacing:.22em;padding:5px 14px;font-weight:600}
+  .box-num{font-family:'Playfair Display',serif;font-size:11px;color:rgba(201,168,76,.5);letter-spacing:.3em;display:block;margin-bottom:10px}
+  .card h3{font-size:26px;margin-bottom:10px}
+  .price{font-family:'Playfair Display',serif;font-size:42px;color:#c9a84c;margin:18px 0}.price small{font-size:14px;color:rgba(245,240,232,.6);font-family:'Lora',serif}
+  .card ul{list-style:none;text-align:left;margin:24px 0 32px}
+  .card li{padding:9px 0;border-bottom:1px solid rgba(201,168,76,.1);font-size:15px;color:rgba(245,240,232,.85);position:relative;padding-left:22px}
+  .card li::before{content:"◆";color:#c9a84c;position:absolute;left:0;top:9px;font-size:9px}.card li:last-child{border-bottom:none}
+
+  #events{background:linear-gradient(180deg,#0a0a0a,#0d0d0d 50%,#0a0a0a)}
+  .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}@media(max-width:880px){.events-grid{grid-template-columns:1fr}}
+  .event{padding:40px 32px;border:1px solid rgba(201,168,76,.18);background:#0d0d0d;position:relative}
+  .event-num{font-family:'Playfair Display',serif;font-size:54px;color:rgba(201,168,76,.25);font-weight:900;line-height:1;margin-bottom:14px}
+  .event h3{font-size:24px;margin-bottom:14px;color:#c9a84c}
+  .event p{font-size:15px;color:rgba(245,240,232,.78)}
+
+  #about{background:#0a0a0a}.about-wrap{max-width:780px;margin:0 auto;text-align:center}
+  .about-wrap h2{margin-bottom:30px}
+  .about-wrap p{font-size:18px;line-height:1.85;color:rgba(245,240,232,.8);margin-bottom:22px}
+  .about-wrap .highlight{font-family:'Playfair Display',serif;font-style:italic;color:#c9a84c;font-size:22px;margin:30px auto;padding:0 30px;max-width:600px;display:block}
+  .divider{width:60px;height:2px;background:#c9a84c;margin:50px auto}
+
+  #cta{background:linear-gradient(135deg,#0d0d0d 0%,#1a1408 50%,#0d0d0d 100%);text-align:center}
+  #cta h2{font-size:clamp(34px,5vw,58px);margin-bottom:24px}#cta p{max-width:560px;margin:0 auto 44px;color:rgba(245,240,232,.78);font-size:18px}
+
+  footer{background:#080808;padding:70px 0 100px;border-top:1px solid rgba(201,168,76,.15)}
+  .foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:40px}@media(max-width:780px){.foot-grid{grid-template-columns:1fr;text-align:center}}
+  .foot-grid h4{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:#c9a84c;margin-bottom:18px}
+  .foot-grid p,.foot-grid a{font-size:15px;color:rgba(245,240,232,.75);display:block;margin-bottom:6px}
+  .copyright{text-align:center;color:rgba(245,240,232,.4);font-size:13px;padding-top:30px;border-top:1px solid rgba(201,168,76,.1)}
+
+  .mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:#c9a84c;color:#0a0a0a;text-align:center;padding:16px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:13px;z-index:200;box-shadow:0 -4px 20px rgba(0,0,0,.6)}
+  @media(max-width:880px){.mobile-cta{display:block}body{padding-bottom:54px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-wrap">
+  <div class="logo">The Cigar Bank<span>Historic Square · McDonough</span></div>
+  <ul class="nav-links">
+    <li><a href="#vault">Safety Deposit Boxes</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#cta" class="nav-cta">Visit</a></li>
+  </ul>
+</div></nav>
+
+<section class="hero">
+  <div class="vault-bg"></div>
+  <div class="container hero-inner">
+    <div class="est-badge"><span class="line"></span><span>Est. 1911 · Restored 2020</span><span class="line"></span></div>
+    <h1>Make A Deposit.<br>In Your <em>Vault.</em></h1>
+    <p class="sub">Housed in McDonough's first banking institution — original marble columns, vintage teller windows, and a 1911 vault repurposed as a premium humidor. Reserve your humidified safety deposit box. Your cigars belong here.</p>
+    <div class="vault-stats">
+      <div class="vault-stat"><span class="num">1911</span><span class="lab">Built</span></div>
+      <div class="vault-stat"><span class="num">Vault</span><span class="lab">Humidor</span></div>
+      <div class="vault-stat"><span class="num">Mon–Sun</span><span class="lab">Open Daily</span></div>
+    </div>
+    <a href="#vault" class="btn">Reserve Your Box</a>
+    <a href="#cta" class="btn btn-outline">Visit The Bank</a>
+  </div>
+</section>
+
+<section id="vault"><div class="container">
+  <span class="sec-eyebrow">Humidified Safety Deposit Boxes</span>
+  <h2 class="sec-title">Three Tiers. One Vault.</h2>
+  <p class="sec-sub">Premium cigar storage in a real 1911 bank vault — three deposit box tiers with members-only access, priority seating, and the kind of exclusivity the original depositors would have understood.</p>
+  <div class="grid-3">
+    <div class="card">
+      <span class="box-num">BOX TIER · 001</span>
+      <h3>Standard Deposit</h3>
+      <div class="price">$65<small>/month</small></div>
+      <ul>
+        <li>Personal humidified safety deposit box</li>
+        <li>10% off all cigars + accessories</li>
+        <li>Members-only Sommelier Saturday pricing</li>
+        <li>Priority access to Smoke & Keys events</li>
+      </ul>
+      <a href="#cta" class="btn">Reserve</a>
+    </div>
+    <div class="card featured">
+      <span class="box-num">BOX TIER · 002</span>
+      <h3>Aficionado Deposit</h3>
+      <div class="price">$135<small>/month</small></div>
+      <ul>
+        <li>Premium box (double capacity)</li>
+        <li>15% off cigars + spirits</li>
+        <li>Reserved seat at vintage teller bar</li>
+        <li>Quarterly cigar pairing dinner</li>
+        <li>Bring 2 guests free Mon–Wed</li>
+      </ul>
+      <a href="#cta" class="btn">Reserve</a>
+    </div>
+    <div class="card">
+      <span class="box-num">BOX TIER · 003</span>
+      <h3>Vault Patron</h3>
+      <div class="price">$245<small>/month</small></div>
+      <ul>
+        <li>Largest box tier inside the original vault</li>
+        <li>20% off everything</li>
+        <li>Reserved booth any night</li>
+        <li>VIP at all Smoke & Keys events</li>
+        <li>2 complimentary Room 101 cigars monthly</li>
+      </ul>
+      <a href="#cta" class="btn">Reserve</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="events"><div class="container">
+  <span class="sec-eyebrow">Events At The Bank</span>
+  <h2 class="sec-title">Smoke & Keys. Sommelier Saturdays.</h2>
+  <p class="sec-sub">A historic venue with a curated calendar — live jazz nights, wine-and-cigar pairings, and the kind of private events that elevate every gathering on the McDonough Square.</p>
+  <div class="events-grid">
+    <div class="event"><div class="event-num">01</div><h3>Smoke & Keys Live Jazz</h3><p>Featured pianists like Robert Carr filling the historic main hall with live jazz, cigars, and curated whiskey pairings. The crown jewel of our event calendar.</p></div>
+    <div class="event"><div class="event-num">02</div><h3>Sommelier Saturdays</h3><p>Wine pairings curated for premium cigars. A guided tasting in a 1911 bank lobby with marble columns and a vault humidor — Saturdays are made for this.</p></div>
+    <div class="event"><div class="event-num">03</div><h3>Private Vault Events</h3><p>Reserve The Cigar Bank for birthdays, corporate cigar nights, or weddings. Custom catering, full bar, and a venue your guests won't stop talking about.</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="container">
+  <div class="about-wrap">
+    <span class="sec-eyebrow">Our Story</span>
+    <h2 class="sec-title">McDonough's First Bank.<br>Now Its Premier Cigar Lounge.</h2>
+    <div class="divider"></div>
+    <p>The Cigar Bank occupies a building with a century of stories. Built in 1911 as McDonough's premier banking institution, the original marble columns, intricate moldings, vintage teller windows, and majestic vault have all been preserved — and reimagined for a different kind of clientele.</p>
+    <span class="highlight">"We do more than offer premium cigars. We curate experiences that elevate your appreciation for the finer things."</span>
+    <p>Today, the vault holds humidified safety deposit boxes for Atlanta-area aficionados. The teller windows are now where you order your Old Fashioned. And the historic marble lobby hosts Smoke & Keys jazz nights, Sommelier Saturdays, and Room 101 cigar releases. Every visit is more than a smoke. It's an experience that transports guests to a timeless world of sophistication and refinement.</p>
+  </div>
+</div></section>
+
+<section id="cta"><div class="container">
+  <h2>Step Inside The Bank.<br>Step Into 1911.</h2>
+  <p>Walk-ins always welcome. For deposit box reservations, private events, or Smoke & Keys ticket holds — give us a call. McDonough's most historic address is open seven days a week.</p>
+  <a href="tel:4708781184" class="btn">Call (470) 878-1184</a>
+</div></section>
+
+<footer><div class="container">
+  <div class="foot-grid">
+    <div><h4>Visit Us</h4><p>19 Keys Ferry Street, Suite B<br>Historic McDonough Square<br>McDonough, GA 30253</p></div>
+    <div><h4>Hours</h4><p>Mon-Sat · 10 AM – 10 PM<br>Sun · Noon – 9 PM</p></div>
+    <div><h4>Contact</h4><a href="tel:4708781184">470.878.1184</a><a href="tel:6786644737">678.664.4737</a><a href="mailto:contact@thecigarbank.com">contact@thecigarbank.com</a></div>
+  </div>
+  <div class="copyright">© The Cigar Bank · Historic McDonough Square · Building Est. 1911 · Cigar Lounge Est. 2020</div>
+</div></footer>
+
+<a href="#cta" class="mobile-cta">Reserve Your Box →</a>
+</body>
+</html>
